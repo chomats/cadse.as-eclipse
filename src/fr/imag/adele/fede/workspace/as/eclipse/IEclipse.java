@@ -134,6 +134,4 @@ public interface IEclipse {
 	 * @throws CadseException
 	 */
 	public void copyResource(Item item, String path, URL data) throws CadseException;
-
-	public abstract CadseRuntime[] openDialog(boolean askToErase);
 }
