@@ -1,39 +1,66 @@
-<project>
-	<parent>
-		<artifactId>app</artifactId>
-		<groupId>fr.imag.adele.workspace</groupId>
-		<version>1.0.0.SNAPSHOT</version>
-	</parent>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<packaging>jar</packaging>
-	<groupId>fr.imag.adele.workspace</groupId>
-	<artifactId>workspace.role.eclipse</artifactId>
-	<name>workspace.role.eclipse</name>
-	<version>1.0.0.SNAPSHOT</version>
-
-	<dependencies>
-		<dependency>
-			<groupId>fr.imag.adele.melusine</groupId>
-			<artifactId>melusine.core</artifactId>
-			<version>1.0.0.SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>fr.imag.adele.workspace</groupId>
-			<artifactId>workspace.core</artifactId>
-			<version>1.0.0.SNAPSHOT</version>
-		</dependency>
-		<dependency>
-		    <groupId>org.eclipse.equinox</groupId>
-		    <artifactId>common</artifactId>
-		    <version>3.3.0.v20070426</version>
-		</dependency>
-		<dependency>
-		    <groupId>org.eclipse.core</groupId>
-		    <artifactId>resources</artifactId>
-		    <version>3.3.0.v20070604</version>
-		</dependency>
-	</dependencies>
-	<build>
-		<sourceDirectory>sources</sourceDirectory>
-	</build>
+	<groupId>fr.imag.adele.cadse</groupId>
+	<artifactId>as.eclipse</artifactId>
+	<name>fr.imag.adele.cadse.as.eclipse</name>
+	<version>2.3.0-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>as.cu</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>as.cu</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse</groupId>
+            <artifactId>org.eclipse.ui.views</artifactId>
+            <version>3.4.1.M20090826-0800</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse</groupId>
+            <artifactId>org.eclipse.ui.workbench</artifactId>
+            <version>3.5.1.M20090826-0800a</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse</groupId>
+            <artifactId>swt</artifactId>
+            <version>3.5.1.v3555a</version>
+        </dependency>
+    </dependencies>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 </project>
+
+
+
+
+
+
