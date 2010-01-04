@@ -7,29 +7,21 @@
 	<artifactId>as.eclipse</artifactId>
 	<name>fr.imag.adele.cadse.as.eclipse</name>
 	<version>2.3.0-SNAPSHOT</version>
+    <parent>
+		<artifactId>fr.imag.adele.cadse.parent</artifactId>
+		<groupId>fr.imag.adele.cadse</groupId>
+		<version>2.3.0-SNAPSHOT</version>
+		<relativePath>../fr.imag.adele.cadse.parent</relativePath>
+	</parent>
     <build>
-        <finalName>${project.name}_${project.version}</finalName>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
                 <extensions>true</extensions>
                 <configuration>
-                    <manifestLocation>META-INF</manifestLocation>
                     <instructions>
-                        <Bundle-Name>${pom.name}</Bundle-Name>
-                        <Bundle-Description>${pom.description}</Bundle-Description>
-                        <Export-Package>fr.imag.adele.fede.workspace.as.eclipse</Export-Package>
-                        <Private-Package></Private-Package>
-                        <Import-Package>*</Import-Package>
+                        <Export-Package>fr.imag.adele.fede.workspace.as.eclipse;version="2.3.0"</Export-Package>
                     </instructions>
                 </configuration>
             </plugin>
@@ -39,33 +31,25 @@
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>as.cu</artifactId>
-            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>as.cu</artifactId>
-            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse</groupId>
             <artifactId>org.eclipse.ui.views</artifactId>
-            <version>3.4.1.M20090826-0800</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse</groupId>
             <artifactId>org.eclipse.ui.workbench</artifactId>
-            <version>3.5.1.M20090826-0800a</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse</groupId>
             <artifactId>swt</artifactId>
-            <version>3.5.1.v3555a</version>
             <type>pom</type>
         </dependency>
     </dependencies>
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
 </project>
 
 
