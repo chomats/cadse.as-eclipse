@@ -21,7 +21,7 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <Export-Package>fr.imag.adele.fede.workspace.as.eclipse;version="2.3.0"</Export-Package>
+                        <Export-Package>fr.imag.adele.fede.workspace.as.eclipse;version="${version.cadse}"</Export-Package>
                     </instructions>
                 </configuration>
             </plugin>
