@@ -33,10 +33,6 @@
             <artifactId>as.cu</artifactId>
         </dependency>
         <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>as.cu</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.eclipse</groupId>
             <artifactId>org.eclipse.ui.views</artifactId>
         </dependency>
